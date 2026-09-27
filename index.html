@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arvores — Explore o mundo das árvores</title>
+  <meta name="description" content="Um espaço para conhecer, entender e valorizar as árvores: espécies, benefícios e curiosidades." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="logo" aria-label="Arvores — página inicial">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        Arvores
+      </a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a class="site-nav__link" href="index.html" aria-current="page">Início</a>
+        <a class="site-nav__link" href="especies.html">Espécies</a>
+        <a class="site-nav__link" href="beneficios.html">Benefícios</a>
+        <a class="site-nav__link" href="contato.html">Contato</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer-overlay"></div>
+  <nav class="drawer" id="menu-mobile" aria-label="Menu móvel">
+    <a class="drawer__link" href="index.html" aria-current="page">Início</a>
+    <a class="drawer__link" href="especies.html">Espécies</a>
+    <a class="drawer__link" href="beneficios.html">Benefícios</a>
+    <a class="drawer__link" href="contato.html">Contato</a>
+  </nav>
+
+  <main id="conteudo">
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="section-eyebrow reveal">Mundo natural</p>
+        <h1 class="hero__title reveal">A vida silenciosa das árvores</h1>
+        <p class="hero__sub reveal">Elas sustentam o ar que respiramos, abrigam a maior parte da vida terrestre e comunicam-se sob nossos pés. Explore o universo das árvores.</p>
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="especies.html">Explorar espécies</a>
+          <a class="btn btn--secondary" href="beneficios.html">Ver benefícios</a>
+        </div>
+        <div class="hero__stats reveal">
+          <div class="stat">
+            <span class="stat__value">60 mil</span>
+            <span class="stat__label">espécies conhecidas</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">4 bi ha</span>
+            <span class="stat__label">de florestas no mundo</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">80%</span>
+            <span class="stat__label">da vida terrestre nas florestas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Importância</p>
+          <h2 class="section-title">Por que as árvores importam</h2>
+          <p class="section-sub">Muito além da paisagem: cada árvore mantém processos essenciais à vida no planeta.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+            </div>
+            <h3 class="card__title">Ar que respiramos</h3>
+            <p class="card__text">Uma árvore madura absorve CO₂ e libera oxigênio suficiente para duas pessoas por dia.</p>
+          </article>
+          <article class="card reveal" style="--reveal-delay:80ms">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 6.34l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 17.66l1.41-1.41"/></svg>
+            </div>
+            <h3 class="card__title">Clima em equilíbrio</h3>
+            <p class="card__text">Regulam temperatura, umidade e chuvas, além de filtrar poluentes do ar.</p>
+          </article>
+          <article class="card reveal" style="--reveal-delay:160ms">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="card__title">Abrigo da biodiversidade</h3>
+            <p class="card__text">Florestas abrigam cerca de 80% das espécies animais e vegetais terrestres.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Catálogo</p>
+          <h2 class="section-title">Espécies em destaque</h2>
+          <p class="section-sub">Uma amostra do catálogo: nativas, frutíferas e exóticas que merecem ser conhecidas.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__title-row">
+              <h3 class="card__title">Ipê-amarelo</h3>
+              <span class="badge badge--accent">Nativa</span>
+            </div>
+            <p class="card__subtitle">Handroanthus albus</p>
+            <p class="card__text">Florescimento amarelo intenso no inverno; símbolo das ruas e praças brasileiras.</p>
+          </article>
+          <article class="card reveal" style="--reveal-delay:80ms">
+            <div class="card__title-row">
+              <h3 class="card__title">Sequoia</h3>
+              <span class="badge badge--accent">Exótica</span>
+            </div>
+            <p class="card__subtitle">Sequoiadendron giganteum</p>
+            <p class="card__text">Maior árvore do mundo em volume, com mais de três mil anos de vida.</p>
+          </article>
+          <article class="card reveal" style="--reveal-delay:160ms">
+            <div class="card__title-row">
+              <h3 class="card__title">Jabuticabeira</h3>
+              <span class="badge badge--accent">Frutífera</span>
+            </div>
+            <p class="card__subtitle">Plinia cauliflora</p>
+            <p class="card__text">Frutos direto no tronco; presença marcante nos quintais brasileiros.</p>
+          </article>
+        </div>
+        <div class="section-actions reveal">
+          <a class="btn btn--ghost" href="especies.html">
+            Ver todas as espécies
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2 class="section-title">Quer saber mais?</h2>
+          <p class="section-sub">Envie dúvidas, sugestões ou apenas diga olá — respondemos em até dois dias úteis.</p>
+          <a class="btn btn--primary" href="contato.html">Entrar em contato</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <a href="index.html" class="logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          Arvores
+        </a>
+        <p>Um espaço dedicado a conhecer, entender e valorizar as árvores do nosso planeta.</p>
+      </div>
+      <div>
+        <h2 class="site-footer__heading">Navegação</h2>
+        <ul class="site-footer__links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="especies.html">Espécies</a></li>
+          <li><a href="beneficios.html">Benefícios</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading">Contato</h2>
+        <ul class="site-footer__links">
+          <li><a href="mailto:ola@arvores.exemplo">ola@arvores.exemplo</a></li>
+          <li>Seg–Sex, 9h às 18h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      © 2025 Arvores. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <div class="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

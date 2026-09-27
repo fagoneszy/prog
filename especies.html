@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Espécies — Arvores</title>
+  <meta name="description" content="Catálogo de espécies de árvores: nativas, frutíferas e exóticas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="logo" aria-label="Arvores — página inicial">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        Arvores
+      </a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a class="site-nav__link" href="index.html">Início</a>
+        <a class="site-nav__link" href="especies.html" aria-current="page">Espécies</a>
+        <a class="site-nav__link" href="beneficios.html">Benefícios</a>
+        <a class="site-nav__link" href="contato.html">Contato</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer-overlay"></div>
+  <nav class="drawer" id="menu-mobile" aria-label="Menu móvel">
+    <a class="drawer__link" href="index.html">Início</a>
+    <a class="drawer__link" href="especies.html" aria-current="page">Espécies</a>
+    <a class="drawer__link" href="beneficios.html">Benefícios</a>
+    <a class="drawer__link" href="contato.html">Contato</a>
+  </nav>
+
+  <main id="conteudo">
+    <nav class="breadcrumbs container" aria-label="Trilha de navegação">
+      <ol>
+        <li><a href="index.html">Início</a></li>
+        <li aria-current="page">Espécies</li>
+      </ol>
+    </nav>
+
+    <section class="page-header">
+      <div class="container page-header__inner">
+        <p class="section-eyebrow">Catálogo</p>
+        <h1 class="section-title">Espécies de árvores</h1>
+        <p class="section-sub">Explore nativas, frutíferas e exóticas. Use os filtros para encontrar o que procura.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="toolbar">
+          <div class="tabs" role="tablist" aria-label="Filtrar por categoria">
+            <button class="tab" role="tab" aria-selected="true" data-category="todas">Todas</button>
+            <button class="tab" role="tab" aria-selected="false" data-category="nativa">Nativas</button>
+            <button class="tab" role="tab" aria-selected="false" data-category="frutífera">Frutíferas</button>
+            <button class="tab" role="tab" aria-selected="false" data-category="exótica">Exóticas</button>
+          </div>
+          <div class="field toolbar__search">
+            <label class="visually-hidden" for="busca">Buscar espécie</label>
+            <input class="input js-catalog-search" id="busca" type="search" placeholder="Buscar por nome ou nome científico…" />
+          </div>
+        </div>
+
+        <div class="js-catalog">
+          <div class="js-catalog-skeletons" hidden>
+            <div class="grid grid--3">
+              <div class="skeleton-card">
+                <div class="skeleton skeleton--title"></div>
+                <div class="skeleton skeleton--line"></div>
+                <div class="skeleton skeleton--line skeleton--line-short"></div>
+              </div>
+              <div class="skeleton-card">
+                <div class="skeleton skeleton--title"></div>
+                <div class="skeleton skeleton--line"></div>
+                <div class="skeleton skeleton--line skeleton--line-short"></div>
+              </div>
+              <div class="skeleton-card">
+                <div class="skeleton skeleton--title"></div>
+                <div class="skeleton skeleton--line"></div>
+                <div class="skeleton skeleton--line skeleton--line-short"></div>
+              </div>
+              <div class="skeleton-card">
+                <div class="skeleton skeleton--title"></div>
+                <div class="skeleton skeleton--line"></div>
+                <div class="skeleton skeleton--line skeleton--line-short"></div>
+              </div>
+              <div class="skeleton-card">
+                <div class="skeleton skeleton--title"></div>
+                <div class="skeleton skeleton--line"></div>
+                <div class="skeleton skeleton--line skeleton--line-short"></div>
+              </div>
+              <div class="skeleton-card">
+                <div class="skeleton skeleton--title"></div>
+                <div class="skeleton skeleton--line"></div>
+                <div class="skeleton skeleton--line skeleton--line-short"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid--3 js-catalog-grid"></div>
+
+          <div class="empty-state" role="status">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            <p class="empty-state__title">Nenhuma espécie encontrada</p>
+            <p>Tente ajustar a busca ou explorar outra categoria do catálogo.</p>
+          </div>
+
+          <nav class="pagination" aria-label="Paginação do catálogo"></nav>
+        </div>
+
+        <noscript>
+          <p class="hint">Ative o JavaScript para explorar o catálogo de espécies.</p>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__overlay"></div>
+    <div class="modal__dialog">
+      <button class="modal__close" aria-label="Fechar detalhes">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <span class="badge badge--accent" id="modal-badge">Nativa</span>
+      <h2 class="section-title" id="modal-title" style="font-size: var(--text-2xl);">Ipê-amarelo</h2>
+      <p class="card__subtitle" id="modal-latin">Handroanthus albus</p>
+      <p class="card__text" id="modal-desc">Descrição detalhada da espécie.</p>
+      <ul class="modal__facts" id="modal-facts"></ul>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <a href="index.html" class="logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          Arvores
+        </a>
+        <p>Um espaço dedicado a conhecer, entender e valorizar as árvores do nosso planeta.</p>
+      </div>
+      <div>
+        <h2 class="site-footer__heading">Navegação</h2>
+        <ul class="site-footer__links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="especies.html">Espécies</a></li>
+          <li><a href="beneficios.html">Benefícios</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="site-footer__heading">Contato</h2>
+        <ul class="site-footer__links">
+          <li><a href="mailto:ola@arvores.exemplo">ola@arvores.exemplo</a></li>
+          <li>Seg–Sex, 9h às 18h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      © 2025 Arvores. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <div class="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
